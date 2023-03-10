@@ -5,7 +5,7 @@ export default function Form() {
             <p>Category</p>
             <p>Description</p>
             <p>Value</p>
-            <button type='submit' className='font-bold text-white bg-green-400 w-[50px] mb[20px] rounded-lg hover:shadow-md hover:ease-in-out duration-200'>Add</button>
+            <button type='submit' className='font-extrabold text-2xl text-white bg-green-400 w-[33px] mb[20px] rounded-lg hover:shadow-md hover:ease-in-out duration-200 hover:bg-green-300'>+</button>
         </div>
 
     )

@@ -1,6 +1,13 @@
-import Balance from "../components/Balance";
-import Form from "../components/Form";
-import List from "../components/List";
+import { useState } from 'react'
+import { Item } from '../types/Item'
+import { Category } from '../types/category'
+import { items } from '../data/Items'
+import { categories } from '../data/categories'
+import Balance from '../components/Balance'
+import Form from '../components/Form'
+import Table from '../components/Table'
+
+const [list, setList] = useState(items)
 
 export default function Finance() {
     return (
@@ -13,7 +20,7 @@ export default function Finance() {
 
             <Form />
 
-            <List />
+            <Table />
         </>
     )
 }
