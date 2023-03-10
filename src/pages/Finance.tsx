@@ -6,18 +6,39 @@ export default function Finance() {
             </div>
 
             <div className='font-semibold grid grid-cols-4 m-auto -mt-9 max-w-[980px] min-h-[100px] mb-[20px] rounded-t-sm shadow-md place-items-center bg-stone-100'>
-                    <p>Month</p>
-                    <p>Income</p>
-                    <p>Expenses</p>
-                    <p>Balance</p>
+                <p>Month</p>
+                <p>Income</p>
+                <p>Expenses</p>
+                <p>Balance</p>
             </div>
 
-            <div className='font-semibold flex flex-auto justify-center smartphone:space-x-3 tablet:space-x-10 laptop:space-x-20 items-center m-auto max-w-[980px] min-h-[100px] mb-[40px] rounded-t-sm shadow-md bg-stone-100'>
-                    <p>Date</p>
-                    <p>Category</p>
-                    <p>Description</p>
-                    <p>Value</p>
-                    <button type='submit' className='font-bold text-white bg-green-400 w-[50px] rounded-lg hover:shadow-md hover:ease-in-out duration-200' >Add</button>
+            <div className='font-semibold flex justify-center smartphone:space-x-3 tablet:space-x-10 inter:space-x-20 desktop:space-x-40 items-center m-auto max-w-[980px] min-h-[100px] mb-[20px] rounded-t-sm shadow-md bg-stone-100'>
+                <p>Date</p>
+                <p>Category</p>
+                <p>Description</p>
+                <p>Value</p>
+                <button type='submit' className='font-bold text-white bg-green-400 w-[50px] mb[20px] rounded-lg hover:shadow-md hover:ease-in-out duration-200'>Add</button>
+            </div>
+
+            <div className='m-auto max-w-[980px] min-h-[300px] mb-[20px] rounded-t-sm shadow-md bg-stone-100'>
+                <table className='table-auto'>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Title</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Date xx</td>
+                            <td>Category xx</td>
+                            <td>Title xx</td>
+                            <td>Value xx</td>
+                        </tr>
+                    </tbody>
+                </table>    
             </div>
         </>
     )
