@@ -6,17 +6,19 @@ import { categories } from '../data/categories'
 import Balance from '../components/Balance'
 import Form from '../components/Form'
 import Table from '../components/Table'
-import { getCurrentMonth } from '../helpers/dateFilter'
+import { getCurrentMonth, filterListByMonth } from '../helpers/dateFilter'
 
 
 export default function Finance() {
+
     
 const [list, setList] = useState(items)
 const [filteredList, setFilteredList] = useState<Item[]>([])
 const [currentMonth, setCurrentMonth] = useState(new Date(getCurrentMonth()))
 
 useEffect(() => {
-})
+    setFilteredList( filterListByMonth(list, currentMonth))
+}, [list, currentMonth])
 
     return (
         <>
