@@ -1,4 +1,6 @@
 export default function Table() {
+
+    
     return (
         <div className='m-auto max-w-[980px] min-h-[300px] mb-[20px] rounded-t-sm shadow-md bg-stone-100'>
             <div className='pt-3'>
@@ -11,7 +13,7 @@ export default function Table() {
                             <th>Value</th>
                         </tr>
                     </thead>
-                    <br />
+                    <br/>
                     <tbody className='font-mono text-gray-600'>
                         <tr>
                             <td>Date xx</td>
