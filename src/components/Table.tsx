@@ -13,13 +13,12 @@ export default function Table() {
                             <th>Value</th>
                         </tr>
                     </thead>
-                    <br/>
                     <tbody className='font-mono text-gray-600'>
-                        <tr>
+                        <tr className='h-10'>
                             <td>Date xx</td>
                             <td>Category xx</td>
                             <td>Title xx</td>
-                            <td>Value xx</td>
+                            <td>Value xx</td>               
                         </tr>
                     </tbody>
                 </table>

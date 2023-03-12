@@ -9,13 +9,15 @@ import Table from '../components/Table'
 import { getCurrentMonth } from '../helpers/dateFilter'
 
 
+export default function Finance() {
+    
 const [list, setList] = useState(items)
 const [filteredList, setFilteredList] = useState<Item[]>([])
 const [currentMonth, setCurrentMonth] = useState(new Date(getCurrentMonth()))
 
+useEffect(() => {
+})
 
-
-export default function Finance() {
     return (
         <>
             <div className='font-bold p-5 pb-12 bg-green-400 text-stone-50 text-2xl text-center'>
