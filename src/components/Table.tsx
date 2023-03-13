@@ -1,5 +1,6 @@
 import { Item } from "../types/Item"
 import { formatDate } from "../helpers/dateFilter"
+import TableItem from "./TableItem"
 type Props = {
     list: Item[]
 }
@@ -21,16 +22,11 @@ export default function Table({ list }: Props) {
                     </thead>
                     <tbody className='font-mono text-gray-600'>
                         {list.map((item, index) => (
-                            <tr key={index} className='h-10'>
-                                <td>{formatDate(item.date)}</td>
-                                <td>{item.category}</td>
-                                <td>{item.description}</td>
-                                <td>{item.value}</td>
-                            </tr>
+                            <TableItem key={index} item={item}/>
                         ))}
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
         </div>
+        </div >
     )
 }
