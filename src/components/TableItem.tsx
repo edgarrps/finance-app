@@ -10,7 +10,7 @@ export default function TableItem({ item }: Props) {
     return (
         <tr className='h-10'>
             <td>{formatDate(item.date)}</td>
-            <td>{categories[item.category].title}</td>
+            <td className={`text-white font-bold ${item.category == 'food' ? 'bg-orange-500' : ''}`}>{categories[item.category].title}</td>
             <td>{item.description}</td>
             <td>$ {item.value}</td>
         </tr>
