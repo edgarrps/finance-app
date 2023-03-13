@@ -1,5 +1,4 @@
 import { Item } from "../types/Item"
-import { formatDate } from "../helpers/dateFilter"
 import TableItem from "./TableItem"
 type Props = {
     list: Item[]

@@ -17,8 +17,8 @@ export const filterListByMonth = (list: Item[], date: string): Item[] => {
 
 export const formatDate = (date: Date): string => {
     let year = date.getFullYear()
-    let month = date.getMonth()+1
+    let month = date.getMonth() + 1
     let day = date.getDate()
 
-    return `${day}/${month}/${year}`
+    return `${day < 10 ? '0' + day : day}/${month < 11 ? '0' + month : month}/${year}`
 }
