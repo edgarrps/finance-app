@@ -20,13 +20,16 @@ useEffect(() => {
     setFilteredList( filterListByMonth(list, currentMonth))
 }, [list, currentMonth])
 
+const handleMonthChange = (newMonth: string) => {
+    setCurrentMonth(newMonth)
+}
     return (
         <>
             <div className='font-bold p-5 pb-12 bg-green-400 text-stone-50 text-2xl text-center'>
                 <h1>Finance App</h1>
             </div>
 
-            <Balance />
+            <Balance onMonthChange={handleMonthChange} currentMonth={currentMonth} />
 
             <Form />
 
