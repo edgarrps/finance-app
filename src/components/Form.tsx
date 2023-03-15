@@ -101,7 +101,7 @@ export default function Form({ addItem }: Props) {
                     desktop:w-[123px] desktop:pl-3
                     inter:w-[113px] inter:pl-3
                     tablet:w-[93px] tablet:pl-3
-                    smartphone:w-[200px] smartphone:pl-3'
+                    smartphone:w-[200px] smartphone:pl-0'
                 />
             </div>
             <div className='grid grid-row-2 place-items-center tablet:pb-0 smartphone:pb-5'>
