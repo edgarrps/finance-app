@@ -4,7 +4,7 @@ import { items } from '../data/Items'
 import { categories } from '../data/categories'
 import Balance from '../components/Balance'
 import Form from '../components/Form'
-import Table from '../components/Table'
+import Table from '../components/Table/Table'
 import { getCurrentMonth, filterListByMonth } from '../helpers/dateFilter'
 
 

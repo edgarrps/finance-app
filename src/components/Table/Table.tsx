@@ -1,4 +1,4 @@
-import { Item } from "../types/Item"
+import { Item } from "../../types/Item"
 import TableItem from "./TableItem"
 type Props = {
     list: Item[]
@@ -13,10 +13,10 @@ export default function Table({ list }: Props) {
                 <table className='table-fixed text-stone-600 w-full text-center'>
                     <thead>
                         <tr className='h-10'>
-                            <th className='w-40'>Data</th>
-                            <th className='w-40'>Categoria</th>
-                            <th>Descrição</th>
-                            <th className='w-40'>Valor</th>
+                            <th className='w-40 smartphone:w-10 desktop:text-xl inter:text-lg smartphone:text-sm'>Data</th>
+                            <th className='w-40 smartphone:w-10 desktop:text-xl inter:text-lg smartphone:text-sm'>Categoria</th>
+                            <th className='smartphone:w-20 desktop:text-xl inter:text-lg smartphone:text-sm'>Descrição</th>
+                            <th className='w-20 smartphone:w-10 desktop:text-xl inter:text-lg smartphone:text-sm'>Valor</th>
                         </tr>
                     </thead>
                     <tbody className='font-mono text-gray-600'>
