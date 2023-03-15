@@ -12,11 +12,11 @@ export default function Table({ list }: Props) {
             <div className='pt-3'>
                 <table className='table-fixed text-stone-600 w-full text-center'>
                     <thead>
-                        <tr>
-                            <th className='w-40'>Date</th>
-                            <th className='w-40'>Category</th>
-                            <th>Description</th>
-                            <th className='w-40'>Value </th>
+                        <tr className='h-10'>
+                            <th className='w-40'>Data</th>
+                            <th className='w-40'>Categoria</th>
+                            <th>Descrição</th>
+                            <th className='w-40'>Valor</th>
                         </tr>
                     </thead>
                     <tbody className='font-mono text-gray-600'>

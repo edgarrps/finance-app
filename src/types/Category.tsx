@@ -1,7 +1,6 @@
 export type Category = {
     [badge: string]: {
-        title: string;
-        color: string;
+        title: string
         expense: boolean
     }
 }

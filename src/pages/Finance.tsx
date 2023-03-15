@@ -15,6 +15,9 @@ export default function Finance() {
 const [list, setList] = useState(items)
 const [filteredList, setFilteredList] = useState<Item[]>([])
 const [currentMonth, setCurrentMonth] = useState(getCurrentMonth())
+const [income, setIncome] = useState(0)
+const [expense, setExpense] = useState(0)
+const balance = income - expense
 
 useEffect(() => {
     setFilteredList( filterListByMonth(list, currentMonth))
@@ -29,7 +32,7 @@ const handleMonthChange = (newMonth: string) => {
                 <h1>Finance App</h1>
             </div>
 
-            <Balance onMonthChange={handleMonthChange} currentMonth={currentMonth} />
+            <Balance onMonthChange={handleMonthChange} currentMonth={currentMonth} income={income} expense={expense} balance={balance}/>
 
             <Form />
 
