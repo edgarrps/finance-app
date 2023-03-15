@@ -6,7 +6,6 @@ type Props = {
     expense: number
     balance: number
 }
-
 export default function Balance({ currentMonth, onMonthChange, income, expense, balance }: Props) {
     const handlePrevMonth = () => {
         let [year, month] = currentMonth.split('-')
@@ -21,8 +20,6 @@ export default function Balance({ currentMonth, onMonthChange, income, expense, 
         currentDate.setMonth(currentDate.getMonth() - 1)
         onMonthChange(`${currentDate.getFullYear()}-${currentDate.getMonth() + 1}`)
     }
-
-
     return (
         <div className='font-semibold text-stone-600 m-auto -mt-9 max-w-[980px] min-h-[100px] mb-[20px] rounded-t-sm shadow-md bg-stone-100'>
             <div className='font-mono flex items-center justify-center space-x-4 pt-2 pb-2 bg-stone-200'>
@@ -37,7 +34,7 @@ export default function Balance({ currentMonth, onMonthChange, income, expense, 
                 </div>
                 <div className='grid grid-row-2 place-items-center'>
                     <p className='font-extrabold'>Saída</p>
-                    <p className={`font-mono ${expense > 0 ? 'text-red-500' : ''}`}>R$ {expense > 0 ? (expense.toFixed(2)).replace(/\./g,',') : income}</p>
+                    <p className={`font-mono ${expense > 0 ? 'text-red-500' : ''}`}>R$ {expense > 0 ? (expense.toFixed(2)).replace(/\./g,',') : expense}</p>
                 </div>
                 <div className='grid grid-row-2 place-items-center'>
                     <p className='font-extrabold'>Saldo</p>

@@ -7,6 +7,7 @@ export const categories: Category = {
     monthly: { title: 'Mensalidade', expense: true },
     health: { title: 'Saúde', expense: true },
     spend: { title: 'Gastos', expense: true },
+    debt: { title: 'Dívidas', expense: true },
     gain: { title: 'Ganhos', expense: false },
     refund: { title: 'Reembolso', expense: false }
 }
