@@ -23,6 +23,12 @@ export default function Finance() {
         setList(newList)
     }
 
+    const handleRemoveItem = (id: any) => {
+        const removeItem = [...list].filter
+        (list => list.id !== id)
+        setList(removeItem)
+    }
+
     useEffect(() => {    
         setFilteredList(filterListByMonth(list, currentMonth))
     }, [list, currentMonth])
@@ -50,7 +56,7 @@ export default function Finance() {
 
             <Form addItem = {handleAddItem} />
 
-            <Table list={filteredList} />
+            <Table list={filteredList} remove={handleRemoveItem} />
         </>
     )
 }

@@ -2,9 +2,10 @@ import { Item } from "../../types/Item"
 import TableItem from "./TableItem"
 type Props = {
     list: Item[]
+    remove: any
 }
 
-export default function Table({ list }: Props) {
+export default function Table({ list, remove }: Props) {
 
 
     return (
@@ -21,7 +22,7 @@ export default function Table({ list }: Props) {
                     </thead>
                     <tbody className='font-mono text-gray-600'>
                         {list.map((item, index) => (
-                            <TableItem key={index} item={item}/>
+                            <TableItem key={index} item={item} remove={remove}/>
                         ))}
                 </tbody>
             </table>

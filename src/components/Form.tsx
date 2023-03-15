@@ -16,28 +16,17 @@ export default function Form({ addItem }: Props) {
 
     let categoryKeys: string[] = Object.keys(categories)
 
-
-
     const handleClick = () => {
         let errors: string[] = []
 
-        if (isNaN(new Date(dateField).getTime())) {
-            errors.push('Data inválida!')
-        }
-        if (!categoryKeys.includes(categoryField)) {
-            errors.push('Categoria inválida!')
-        }
-        if (descField === '') {
-            errors.push('Descrição vazia!')
-        }
-        if (valueField <= 0) {
-            errors.push('Valor inválido!')
-        }
-
-        if (errors.length > 0) {
-            alert(errors.join("\n"))
-        } else {
+        if (isNaN(new Date(dateField).getTime()))  errors.push('Data inválida!')
+        if (!categoryKeys.includes(categoryField)) errors.push('Categoria inválida!')
+        if (descField === '') errors.push('Descrição vazia!')
+        if (valueField <= 0) errors.push('Valor inválido!')
+        if (errors.length > 0) alert(errors.join("\n"))
+        else {
             addItem({
+                id: Math.floor(Math.random() * 10000),
                 date: newDateAdjusted(dateField),
                 category: categoryField,
                 description: descField,
@@ -46,7 +35,6 @@ export default function Form({ addItem }: Props) {
             clearFields()
         }
     }
-
     const clearFields = () => {
         setDateField('')
         setCategoryField('')
@@ -121,6 +109,5 @@ export default function Form({ addItem }: Props) {
                 <button onClick={handleClick} className='font-extrabold text-2xl text-white bg-green-400 w-[33px] rounded-lg hover:shadow-md hover:ease-in-out duration-200 hover:bg-green-300'>+</button>
             </div>
         </div>
-
     )
 }
