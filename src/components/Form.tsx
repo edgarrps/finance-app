@@ -96,12 +96,11 @@ export default function Form({ addItem }: Props) {
                 <input value={valueField}
                     onChange={e => setValueField(parseFloat(e.target.value))}
                     type='number'
-                    className='text-center
-                    
+                    className='text-center    
                     desktop:w-[123px] desktop:pl-3
                     inter:w-[113px] inter:pl-3
-                    tablet:w-[93px] tablet:pl-3
-                    smartphone:w-[200px] smartphone:pl-0'
+                    tablet:w-[93px]
+                    smartphone:w-[200px]'
                 />
             </div>
             <div className='grid grid-row-2 place-items-center tablet:pb-0 smartphone:pb-5'>
