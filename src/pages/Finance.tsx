@@ -23,7 +23,7 @@ export default function Finance() {
         setList(newList)
     }
 
-    const handleRemoveItem = (id: any) => {
+    const handleRemoveItem = (id: number) => {
         const removeItem = [...list].filter
         (list => list.id !== id)
         setList(removeItem)

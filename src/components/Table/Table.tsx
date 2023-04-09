@@ -2,7 +2,7 @@ import { Item } from "../../types/Item"
 import TableItem from "./TableItem"
 type Props = {
     list: Item[]
-    remove: any
+    remove: (value:number) => void
 }
 
 export default function Table({ list, remove }: Props) {
@@ -18,6 +18,7 @@ export default function Table({ list, remove }: Props) {
                             <th className='w-40 smartphone:w-10 desktop:text-xl inter:text-lg smartphone:text-sm'>Categoria</th>
                             <th className='smartphone:w-20 desktop:text-xl inter:text-lg smartphone:text-sm'>Descrição</th>
                             <th className='w-20 smartphone:w-10 desktop:text-xl inter:text-lg smartphone:text-sm'>Valor</th>
+                            <th className='w-[6px] smartphone:w-4 desktop:text-xl inter:text-lg smartphone:text-sm'></th>
                         </tr>
                     </thead>
                     <tbody className='font-mono text-gray-600'>
